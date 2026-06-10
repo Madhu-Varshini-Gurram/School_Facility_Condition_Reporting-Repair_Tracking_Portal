@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ClipboardList, Clock, Wrench, CheckCircle, Search, 
-  Filter, PlusCircle, Calendar, MapPin, Eye, AlertTriangle 
+  PlusCircle, Calendar, MapPin, Eye, AlertTriangle 
 } from 'lucide-react';
 
 export default function Dashboard({ user, token }) {

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ShieldAlert, Settings, Wrench, Download, Search, 
-  Filter, Clock, CheckCircle, ChevronRight, AlertTriangle 
+  Settings, Download, Search, ChevronRight, AlertTriangle 
 } from 'lucide-react';
 
 export default function AdminPanel({ token }) {

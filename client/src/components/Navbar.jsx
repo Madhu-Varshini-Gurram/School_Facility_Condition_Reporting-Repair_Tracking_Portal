@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Home, PlusCircle, Bell, Shield, LogOut, Wrench } from 'lucide-react';
 

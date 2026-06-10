@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Bell, CheckSquare, BellOff, ExternalLink, Calendar } from 'lucide-react';
+import { CheckSquare, BellOff, ExternalLink, Calendar } from 'lucide-react';
 
 export default function Notifications({ token, notifications, onRefreshNotifications }) {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
 
   const markAsRead = async (id) => {
     try {

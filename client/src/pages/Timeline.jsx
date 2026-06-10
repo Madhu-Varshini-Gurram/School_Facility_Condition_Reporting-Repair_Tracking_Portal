@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Clock, CheckCircle, Calendar, MapPin, User, Tag, ShieldCheck, Plus } from 'lucide-react';
+import { ArrowLeft, Calendar, MapPin, User, Tag, ShieldCheck } from 'lucide-react';
 
 export default function Timeline({ user, token }) {
   const { id } = useParams();
