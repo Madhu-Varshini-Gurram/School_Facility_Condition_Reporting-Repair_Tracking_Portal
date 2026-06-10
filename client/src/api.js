@@ -9,6 +9,7 @@
  * variables. All fetch calls below will automatically prepend it.
  */
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+console.log('API_BASE is', API_BASE);
 
 /**
  * Wrapper around fetch that:
