@@ -62,9 +62,22 @@ Now, open your browser and navigate to: **`http://localhost:3000`**
 
 ---
 
-## 👤 Sample Accounts for Manual Testing
+## 👤 Demo & Sample Accounts
 
-The database will be empty upon initial boot. Follow these instructions to register and test the different workflows:
+For easy testing, the following pre-configured demo accounts are available:
+
+### 🔑 Demo Credentials
+* **School Administrator (Admin)**:
+  - **Email**: `admin@school.org`
+  - **Password**: `admin123`
+  - **School ID**: `SCH-90210`
+* **Parent / Teacher (User)**:
+  - **Email**: `parent@school.org`
+  - **Password**: `parent123`
+  - **School ID**: `SCH-90210`
+
+### 🧪 Manual Testing Workflows
+Follow these instructions to test the different user roles:
 
 ### Workflow A: Reporting an Issue (Parent/Teacher Flow)
 1. Navigate to `http://localhost:3000/login` and click **"Register Now"**.
