@@ -389,7 +389,8 @@ h6 {
 
 .navbar-logo span {
   background: linear-gradient(135deg, var(--color-primary), #6366f1);
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

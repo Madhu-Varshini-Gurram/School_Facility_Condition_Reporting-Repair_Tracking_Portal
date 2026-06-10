@@ -64,6 +64,7 @@ if (useMongo) {
     status: { type: String, enum: ['pending', 'in-progress', 'resolved'], default: 'pending' },
     reporter: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     reporterName: { type: String, required: true },
+    schoolId: { type: String, required: true },
     image: { type: String },
     assignedStaff: { type: String, default: '' },
     estimatedResolutionTime: { type: String, default: '' },

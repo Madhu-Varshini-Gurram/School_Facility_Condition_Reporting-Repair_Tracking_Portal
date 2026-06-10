@@ -71,7 +71,6 @@ export default function App() {
   return (
     <Router>
       <div className="app-container">
-        console.log("APP LOADED");
         <Navbar user={user} notifications={notifications} onLogout={handleLogout} />
 
         <Routes>
