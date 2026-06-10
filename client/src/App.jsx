@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     const storedToken = localStorage.getItem('token');
-    
+
     if (storedToken && storedUser) {
       setToken(storedToken);
       setUser(JSON.parse(storedUser));
@@ -71,23 +71,24 @@ export default function App() {
   return (
     <Router>
       <div className="app-container">
+        console.log("APP LOADED");
         <Navbar user={user} notifications={notifications} onLogout={handleLogout} />
-        
+
         <Routes>
           {/* Public Route */}
-          <Route 
-            path="/login" 
-            element={!token ? <Login onLogin={handleLogin} /> : <Navigate to="/dashboard" />} 
+          <Route
+            path="/login"
+            element={!token ? <Login onLogin={handleLogin} /> : <Navigate to="/dashboard" />}
           />
 
           {/* Protected Routes */}
-          <Route 
-            path="/dashboard" 
-            element={token ? <Dashboard user={user} token={token} /> : <Navigate to="/login" />} 
+          <Route
+            path="/dashboard"
+            element={token ? <Dashboard user={user} token={token} /> : <Navigate to="/login" />}
           />
 
-          <Route 
-            path="/report" 
+          <Route
+            path="/report"
             element={
               token ? (
                 user?.role !== 'admin' ? (
@@ -98,31 +99,31 @@ export default function App() {
               ) : (
                 <Navigate to="/login" />
               )
-            } 
+            }
           />
 
-          <Route 
-            path="/timeline/:id" 
-            element={token ? <Timeline user={user} token={token} /> : <Navigate to="/login" />} 
+          <Route
+            path="/timeline/:id"
+            element={token ? <Timeline user={user} token={token} /> : <Navigate to="/login" />}
           />
 
-          <Route 
-            path="/notifications" 
+          <Route
+            path="/notifications"
             element={
               token ? (
-                <Notifications 
-                  token={token} 
-                  notifications={notifications} 
-                  onRefreshNotifications={fetchNotifications} 
+                <Notifications
+                  token={token}
+                  notifications={notifications}
+                  onRefreshNotifications={fetchNotifications}
                 />
               ) : (
                 <Navigate to="/login" />
               )
-            } 
+            }
           />
 
-          <Route 
-            path="/admin" 
+          <Route
+            path="/admin"
             element={
               token ? (
                 user?.role === 'admin' ? (
@@ -133,19 +134,19 @@ export default function App() {
               ) : (
                 <Navigate to="/login" />
               )
-            } 
+            }
           />
 
           {/* Root Redirect */}
-          <Route 
-            path="/" 
-            element={<Navigate to={token ? "/dashboard" : "/login"} />} 
+          <Route
+            path="/"
+            element={<Navigate to={token ? "/dashboard" : "/login"} />}
           />
 
           {/* Fallback Catch-all Redirect */}
-          <Route 
-            path="*" 
-            element={<Navigate to="/" />} 
+          <Route
+            path="*"
+            element={<Navigate to="/" />}
           />
         </Routes>
       </div>
